@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Georgian Wines - Wine Catalog</title>
+  <meta name="description" content="Browse Best Georgian Wines official catalog: Saperavi, Tsinandali, Khvanchkara, Kindzmarauli and more." />
+  <meta name="keywords" content="Best Georgian Wines catalog, Georgian wines, Saperavi, Khvanchkara, wine prices" />
+  <meta name="author" content="Best Georgian Wines" />
+  <meta property="og:title" content="Best Georgian Wines Catalog" />
+  <meta property="og:description" content="Explore the full selection of Best Georgian Wines products." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/USERNAME/BGWines" />
+  <meta property="og:image" content="https://www.bgw.com.ge/static/images/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div id="cartSidebar" class="cart-sidebar" aria-label="Shopping cart sidebar">
+    <div class="title">Cart <button style="float:right;border:none;background:transparent;font-size:1.1rem;cursor:pointer;" onclick="toggleCartSidebar()">×</button></div>
+    <div id="sidebarCartContents"><p>Your cart is empty.</p></div>
+    <div id="sidebarCartTotal"></div>
+    <button class="btn btn-sm" onclick="clearCart()" style="margin-top:0.8rem;">Clear Cart</button>
+  </div>
+  <button class="cart-sidebar-toggle" onclick="toggleCartSidebar()">Cart <span id="cartBadge">0</span></button>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img class="brand-logo" src="https://www.bgw.com.ge/images/logo1.png" alt="Best Georgian Wines logo" /> Best Georgian Wines</a>
+      <button class="burger" id="burgerBtn2" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav2" aria-label="Main site navigation">
+        <a href="index.html">Home</a>
+        <a href="wines.html">Wines</a>
+        <a href="index.html#gallery">Gallery</a>
+        <a href="index.html#about">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="#catalog">Catalog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="catalog">
+      <div class="container">
+        <h2>Wine Catalog</h2>
+        <p>The Best Georgian Wines curated collection from Georgian wineries.</p>
+        <a class="btn" href="#cart" style="margin-bottom:1rem; display:inline-block;">Go to Cart</a>
+        <div class="grid cards">
+          <article class="card">
+            <a href="wine.html?wine=Saperavi"><img src="https://i.ibb.co/LRXdXp4/botli.png" alt="Saperavi" /></a>
+            <h3><a href="wine.html?wine=Saperavi" class="wine-detail-link">Saperavi</a></h3>
+            <p>Classic dry red with deep berries & spice notes.</p>
+            <p class="price">₾45</p>
+            <button class="btn btn-sm" onclick="addToCart('Saperavi',45,1)">Buy now</button>
+          </article>
+          <article class="card">
+            <a href="wine.html?wine=Mukuzani"><img src="https://www.bgw.com.ge/wines/mukuzani.jpg" alt="Mukuzani" /></a>
+            <h3><a href="wine.html?wine=Mukuzani" class="wine-detail-link">Mukuzani</a></h3>
+            <p>Rich Saperavi from Kazbegi region aged in oak.</p>
+            <p class="price">₾48</p>
+            <button class="btn btn-sm" onclick="addToCart('Mukuzani',48,1)">Buy now</button>
+          </article>
+          <article class="card">
+            <a href="wine.html?wine=Kindzmarauli"><img src="https://www.bgw.com.ge/wines/kindzmarauli.png" alt="Kindzmarauli" /></a>
+            <h3><a href="wine.html?wine=Kindzmarauli" class="wine-detail-link">Kindzmarauli</a></h3>
+            <p>Semi-sweet red with ripe cherry, renowned Georgian wine.</p>
+            <p class="price">₾42</p>
+            <button class="btn btn-sm" onclick="addToCart('Kindzmarauli',42,1)">Buy now</button>
+          </article>
+          <article class="card">
+            <a href="wine.html?wine=Tsinandali"><img src="https://www.bgw.com.ge/wines/tsinandali.jpg" alt="Tsinandali" /></a>
+            <h3><a href="wine.html?wine=Tsinandali" class="wine-detail-link">Tsinandali</a></h3>
+            <p>White blend with fresh citrus and floral balance.</p>
+            <p class="price">₾35</p>
+            <button class="btn btn-sm" onclick="addToCart('Tsinandali',35,1)">Buy now</button>
+          </article>
+          <article class="card">
+            <a href="wine.html?wine=Mtsvane"><img src="https://www.bgw.com.ge/wines/mtsvane.png" alt="Mtsvane" /></a>
+            <h3><a href="wine.html?wine=Mtsvane" class="wine-detail-link">Mtsvane</a></h3>
+            <p>Elegant white with orchard fruit and fine acidity.</p>
+            <p class="price">₾33</p>
+            <button class="btn btn-sm" onclick="addToCart('Mtsvane',33,1)">Buy now</button>
+          </article>
+          <article class="card">
+            <a href="wine.html?wine=Okro"><img src="https://www.bgw.com.ge/wines/okro.png" alt="Okro" /></a>
+            <h3><a href="wine.html?wine=Okro" class="wine-detail-link">Okro</a></h3>
+            <p>Semi-sweet blend from Kisi, Chkhaveri and Mtsvane.</p>
+            <p class="price">₾36</p>
+            <button class="btn btn-sm" onclick="addToCart('Okro',36,1)">Buy now</button>
+          </article>
+          <article class="card">
+            <a href="wine.html?wine=8000%20Century"><img src="https://www.bgw.com.ge/wines/8000.png" alt="8000 Century" /></a>
+            <h3><a href="wine.html?wine=8000%20Century" class="wine-detail-link">8000 Century</a></h3>
+            <p>Premium aged red in oak and qvevri.</p>
+            <p class="price">₾85</p>
+            <button class="btn btn-sm" onclick="addToCart('8000 Century',85,1)">Buy now</button>
+          </article>
+          <article class="card">
+            <a href="wine.html?wine=8000%20Tree"><img src="https://www.bgw.com.ge/wines/tree.png" alt="8000 Tree" /></a>
+            <h3><a href="wine.html?wine=8000%20Tree" class="wine-detail-link">8000 Tree</a></h3>
+            <p>Artifact white dry wine with intense mineral finish.</p>
+            <p class="price">₾60</p>
+            <button class="btn btn-sm" onclick="addToCart('8000 Tree',60,1)">Buy now</button>
+          </article>
+          <article class="card">
+            <a href="wine.html?wine=Shavi"><img src="https://www.bgw.com.ge/wines/shavi.png" alt="Shavi" /></a>
+            <h3><a href="wine.html?wine=Shavi" class="wine-detail-link">Shavi</a></h3>
+            <p>Black variety semi-sweet with jammy flavor.</p>
+            <p class="price">₾40</p>
+            <button class="btn btn-sm" onclick="addToCart('Shavi',40,1)">Buy now</button>
+          </article>
+          <article class="card">
+            <a href="wine.html?wine=Chacha%20Premium"><img src="https://www.bgw.com.ge/wines/chacha.jpg" alt="Chacha Premium" /></a>
+            <h3><a href="wine.html?wine=Chacha%20Premium" class="wine-detail-link">Chacha Premium</a></h3>
+            <p>Strong Georgian grape spirit 45% ABV.</p>
+            <p class="price">₾65</p>
+            <button class="btn btn-sm" onclick="addToCart('Chacha Premium',65,1)">Buy now</button>
+          </article>
+          <article class="card">
+            <a href="wine.html?wine=Chacha%20Classic"><img src="https://www.bgw.com.ge/wines/chacha1.jpg" alt="Chacha Classic" /></a>
+            <h3><a href="wine.html?wine=Chacha%20Classic" class="wine-detail-link">Chacha Classic</a></h3>
+            <p>Traditional Georgian chacha 45% ABV.</p>
+            <p class="price">₾55</p>
+            <button class="btn btn-sm" onclick="addToCart('Chacha Classic',55,1)">Buy now</button>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="section" id="cart">
+    <div class="container">
+      <h2>Shopping Cart</h2>
+      <p id="cartStatus" aria-live="polite">Your cart is empty.</p>
+      <div id="cartContents" class="cart-content"></div>
+      <button class="btn" id="clearCartBtn" onclick="clearCart()">Clear Cart</button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Best Georgian Wines. All rights reserved.</p>
+      <p><a href="https://github.com/USERNAME/BGWines" target="_blank" rel="noopener noreferrer">GitHub Repo</a></p>
+      <p><a href="index.html">Back to home</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
